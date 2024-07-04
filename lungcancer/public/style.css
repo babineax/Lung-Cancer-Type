@@ -1,0 +1,710 @@
+/* POPPINS FONT */
+/* let's us animate the custom prop */
+/* if @property isn't supported, everything works, just without the animation */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+  flex-direction: column;
+}
+.wrapper .he{
+  color: #6990F2;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990F2;
+}
+form :where(i, p){
+  color: #6990F2;
+}
+form i{
+  font-size: 50px;
+}
+form p{
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+section .row{
+  margin-bottom: 10px;
+  background: #E9F0FF;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i{
+  color: #6990F2;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit;
+}
+.uploaded-area{
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+
+*{  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: url("images/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background: rgba(39, 39, 39, 0.4);
+}
+.nav{
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+  z-index: 100;
+}
+.nav-logo p{
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.nav-menu ul{
+  display: flex;
+}
+.nav-menu ul li{
+  list-style-type: none;
+}
+.nav-menu ul li .link{
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 0 25px;
+}
+.link:hover, .active{
+  border-bottom: 2px solid #fff;
+}
+.nav-button .btn{
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.btn:hover{
+  background: rgba(255, 255, 255, 0.3);
+}
+#registerBtn{
+  margin-left: 15px;
+}
+.btn.white-btn{
+  background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+  background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+  display: none;
+}
+.form-box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 420px;
+  overflow: hidden;
+  z-index: 2;
+}
+.uploadfile{
+  width:50%;
+  height:420px;
+  
+  display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   
+
+}
+.result{
+  width:50%;
+  height: 420px;
+  
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container{
+  position: absolute;
+  left: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  transition: .5s ease-in-out;
+}
+.register-container{
+  position: absolute;
+  right: -101%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: .5s ease-in-out;
+}
+.top span{
+  color: #fff;
+  font-size: small;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.top span a{
+  font-weight: 500;
+  color: #fff;
+  margin-left: 5px;
+}
+header{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0 30px 0;
+}
+.two-forms{
+  display: flex;
+  gap: 10px;
+}
+.input-field{
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  padding: 0 10px 0 45px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: .2s ease;
+}
+.input-field:hover, .input-field:focus{
+  background: rgba(255, 255, 255, 0.25);
+}
+::-webkit-input-placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: relative;
+  top: -35px;
+  left: 17px;
+  color: #fff;
+}
+.submit{
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.submit:hover{
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.two-col{
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: small;
+  margin-top: 10px;
+}
+.two-col .one{
+  display: flex;
+  gap: 5px;
+}
+.two label a{
+  text-decoration: none;
+  color: #fff;
+}
+.two label a:hover{
+  text-decoration: underline;
+}
+@media only screen and (max-width: 786px){
+  .nav-button{
+      display: none;
+  }
+  .nav-menu.responsive{
+      top: 100px;
+  }
+  .nav-menu{
+      position: absolute;
+      top: -800px;
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      height: 90vh;
+      backdrop-filter: blur(20px);
+      transition: .3s;
+  }
+  .nav-menu ul{
+      flex-direction: column;
+      text-align: center;
+  }
+  .nav-menu-btn{
+      display: block;
+  }
+  .nav-menu-btn i{
+      font-size: 25px;
+      color: #fff;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .3s;
+  }
+  .nav-menu-btn i:hover{
+      background: rgba(255, 255, 255, 0.15);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .all{
+      min-height: 100vh;
+  }
+  .form-box{
+      width: 100%;
+      height: 500px;
+  }
+  .register-container, .login-container{
+      width: 100%;
+      padding: 0 20px;
+  }
+  .register-container .two-forms{
+      flex-direction: column;
+      gap: 0;
+  }
+}
+
+
+
+
+
+
+
+
+@property --progress {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+[role="progressbar"] {
+  --size: 60px;
+  --bar-width: 10px;
+
+  font-size: 1rem;
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  
+  background: conic-gradient(
+    var(--color-dark),
+    var(--color-dark) var(--progress),
+    var(--color-dark-glare) 0%
+  );
+  border-radius: 50vmax;
+
+  display: grid;
+  place-items: center;
+
+  /* this works thanks to the @property at the top */
+  transition: --progress 500ms linear;
+
+  /* we only have this role if JS is enabled */
+  /* which means it's safe to hide the message here */
+  > span {
+    display: none;
+  }
+}
+
+/* using aria-valuenow, to help enforce using it in the JS */
+[role="progressbar"]::after {
+  content: attr(aria-valuenow) "%";
+  background: white;
+  width: calc(100% - var(--bar-width));
+  aspect-ratio: 1;
+  border-radius: inherit;
+  display: grid;
+  place-items: center;
+}
+
+/* when progress === 100 */
+[role="progressbar"][aria-valuenow="100"]::after {
+  /* this is kind of hacky, but it allows the percent to be at 100% for a bit before the checkbox comes in, which feels better */
+  animation: progressComplete 0s forwards;
+  animation-delay: 1000ms;
+}
+.catstat {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width:100%; /* Adjust the gap as needed */
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the grid */
+}
+
+.catstat1, .catstat2 {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column for smaller screens */
+  grid-template-rows: auto auto; /* 2 rows for smaller screens */
+  grid-gap: 10px; /* Adjust the gap as needed */
+}
+
+.catstat1 > div, .catstat2 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  border-radius: 50%;
+  background-color: lightgray; /* Adjust the color as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* Space between circle and label */
+}
+
+span {
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .catstat {
+      grid-template-columns: 1fr; /* 1 column for all sizes */
+  }
+
+  .catstat1, .catstat2 {
+      grid-template-columns: 1fr; /* Reset to 1 column for smaller screens within each grid area */
+      grid-template-rows: auto auto; /* Reset to 2 rows for smaller screens within each grid area */
+  }
+
+  .circle1, .circle2, .circle3, .circle4 {
+      width: 80px; /* Adjust the size for smaller screens */
+      height: 80px; /* Adjust the size for smaller screens */
+  }
+
+  span {
+      font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+}
+
+@media (max-width: 167px) {
+  .catstat {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+      grid-gap: 10px; /* Adjust the gap for smaller screens */
+  }
+
+  .circle1, .circle2, .circle3, .circle4 {
+      width: 60px; /* Adjust the size for very small screens */
+      height: 60px; /* Adjust the size for very small screens */
+  }
+
+  span {
+      font-size: 12px; /* Adjust the font size for very small screens */
+  }
+}
+@keyframes progressComplete {
+  to {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODUiIGhlaWdodD0iODUiIHZpZXdCb3g9IjUgMzAgNzUgMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zNS40MjM3IDUzLjczMjdMNjcuOTc4NyAyMS4xNzc3TDcyLjk4OTUgMjYuMTg0MkwzNS40MTk1IDYzLjc1TDEyLjg4NiA0MS4yMTIyTDE3Ljg5MjUgMzYuMjAxNUwzNS40MjM3IDUzLjczMjdaIiBmaWxsPSIjMWYxYTM4Ii8+Cjwvc3ZnPgo=");
+    background: var(--color-success);
+  }
+}
+
+/* if js is disabled */
+
+
+@layer general-styling-and-whatnot {
+  :root {
+    --font-base: "Space Mono", monospace;
+    --color-dark: #1f1a38;
+    --color-dark-glare: #989ea9;
+    --color-success: #76f7bf;
+    --color-success-dark: #2d7a59;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  
+
+  a {
+    color: var(--color-dark);
+
+    &:is(:hover, :focus) {
+      color: var(--color-success-dark);
+    }
+  }
+
+  .testing-ground {
+    color: var(--color-success);
+    font-weight: bold;
+    background: var(--color-dark);
+    border: 5px solid var(--color-dark-glare);
+    padding: 1rem;
+    margin-block: 3rem;
+
+    display: grid;
+    gap: 1rem;
+  }
+
+  .testing-ground button {
+    cursor: pointer;
+    font: inherit;
+    background: white;
+    color: var(--color-dark);
+    border: 0;
+    padding: 0.5rem;
+
+    &:is(:hover, :focus-visible) {
+      background: var(--color-success);
+    }
+
+    &:is(:focus-visible) {
+      outline: 5px solid var(--color-dark-glare);
+    }
+  }
+}
+
+
+
+.submit-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.submit-btn:active {
+  background-color: #3e8e41;
+}
+
+
+.cancer-box {
+  width: 70%;
+  height: 74px;
+  margin:2px auto;
+  margin-bottom: 10px;
+  background-color: #00BFFF; /* Green background */
+  color: white; /* White text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+#cancer-info {
+  margin: 0; /* Remove default margin from the paragraph */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.info-section {
+  width: 100%;
+  max-width: 100%;
+  min-height: 300px;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  width: calc(50% - 10px);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.chart-container {
+  height: 200px; /* Fixed height for charts */
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
